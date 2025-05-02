@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadBuddy - Car Repair & Emergency Fuel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/Gemini_Generated_Image_jc9t24jc9t24jc9t.jpeg" alt="RoadBuddy Logo" class="logo-img">
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#serviceForm">Services</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+        <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Get Back on the Road with RoadBuddy</h1>
+            <p>Fast, Reliable Car Repair & Emergency Fuel Services</p>
+            <a href="#serviceForm" class="btn-primary">Request Service</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <main>
+        <div class="service-container">
+            <div class="service-option animate">
+                <img src="images/car-repair.jpg" alt="Car Repair" class="service-img">
+                <h2>Car Repair</h2>
+                <p>Need urgent repairs? We will be there to help you!</p>
+            </div>
+            <div class="service-option animate">
+                <img src="images/emergency-fuel.jpg" alt="Emergency Fuel" class="service-img">
+                <h2>Emergency Fuel</h2>
+                <p>Ran out of fuel on the road? We offer emergency fuel delivery!</p>
+            </div>
+        </div>
+
+        <!-- Service Request Form -->
+        <form id="serviceForm" class="animate">
+            <h2>Request Service</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Service Needed:</label>
+            <select id="service" name="service" required>
+                <option value="repair">Car Repair</option>
+                <option value="fuel">Emergency Fuel</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <section id="payment">
+                <h3>Advance Payment</h3>
+                <p>Pay ₹50 to confirm your request.</p>
+
+                <label for="payment-amount">Amount (₹):</label>
+                <input type="text" id="payment-amount" value="50" readonly>
+
+                <button type="button" id="payButton" onclick="processPayment()">Pay ₹50</button>
+            </section>
+
+            <button type="submit" id="submitForm" disabled>Submit Request</button>
+        </form>
+
+        <!-- Google Map Section -->
+        <section id="map" class="animate">
+            <h2>Find a Service Near You</h2>
+            <div id="map-canvas"></div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="animate">
+            <h2>Customer Feedback</h2>
+            <div class="testimonial">
+                <p>"RoadBuddy saved my day when my car broke down. Highly recommend!"</p>
+                <strong>- John Doe</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Fast fuel delivery! Back on the road within 30 minutes!"</p>
+                <strong>- Jane Smith</strong>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="animate">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <h3>How to request service?</h3>
+                <p>Fill out the form, we’ll contact you shortly.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Arrival time?</h3>
+                <p>Usually under 30 minutes depending on location.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Service charges?</h3>
+                <p>We inform you before proceeding based on service type.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="animate">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="name" required>
+
+                <label for="contact-email">Your Email:</label>
+                <input type="email" id="contact-email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h1>Help 24 * 7</h1>
+        <p>© 2024 RoadBuddy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

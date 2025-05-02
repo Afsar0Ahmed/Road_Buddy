@@ -1,0 +1,341 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaeaf3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* background-color: #007bff;
+    
+}
+
+.navbar.shadow {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/Gemini_Generated_Image_8eetvg8eetvg8eet.jpeg') no-repeat center center/cover;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: cornflowerblue;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Main Services Section */
+main {
+    padding: 4rem 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.service-option {
+    text-align: center;
+    width: 45%;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.4s;
+    margin: 1rem;
+}
+
+.service-option:hover {
+    transform: translateY(-10px);
+}
+
+.service-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.service-option:hover .service-img {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* Form Section */
+form {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Payment Section inside form */
+#payment {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#payment h3 {
+    color: #333;
+}
+
+#paymentForm {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#payButton {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#payButton:hover {
+    background-color: #218838;
+}
+
+#submitForm {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submitForm:disabled {
+    background-color: #d6d6d6;
+}
+
+/* Google Map Section */
+#map {
+    margin-top: 3rem;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 400px;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.testimonial strong {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* FAQ */
+#faq {
+    background-color: #f4f4f9;
+    padding: 3rem 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.faq-item h3 {
+    color: #007bff;
+}
+
+/* Contact */
+#contact {
+    padding: 3rem 2rem;
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #007bff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-option {
+        width: 90%;
+    }
+
+    #map-canvas {
+        height: 300px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+/* Simple Scroll Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
